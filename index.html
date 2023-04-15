@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="title-container">
+          <h1>calc</h1>
+          <div>
+            <div class="switch-container">
+              <p>THEME</p>
+              <div class="switch-numbers">
+                <div class="themes-numbers">
+                  <p>1</p>
+                  <p>2</p>
+                  <p>3</p>
+                </div>
+                <input id="switch" type="range" name="points" min="1" max="3" value="1" onchange="toggleSwitch()">
+              </div>
+            </div>
+          </div>
+        </div>
+        <form name="calculator">
+          <input id="screen-input" name="screen" type="text" disabled>
+          <div class="keypad-container">
+            <input class="key" type="button" value="7" onclick="document.calculator.screen.value += '7'">
+            <input class="key" type="button" value="8" onclick="document.calculator.screen.value += '8'">
+            <input class="key" type="button" value="9" onclick="document.calculator.screen.value += '9'">
+            <input class="key delete" type="button" value="DEL" onclick="deleteLast()">
+            <input class="key" type="button" value="4" onclick="document.calculator.screen.value += '4'">
+            <input class="key" type="button" value="5" onclick="document.calculator.screen.value += '5'">
+            <input class="key" type="button" value="6" onclick="document.calculator.screen.value += '6'">
+            <input class="key" type="button" value="+" onclick="plus()">
+            <input class="key" type="button" value="1" onclick="document.calculator.screen.value += '1'">
+            <input class="key" type="button" value="2" onclick="document.calculator.screen.value += '2'">
+            <input class="key" type="button" value="3" onclick="document.calculator.screen.value += '3'">
+            <input class="key" type="button" value="-" onclick="minus()">
+            <input class="key" type="button" value="." onclick="point()">
+            <input class="key" type="button" value="0" onclick="document.calculator.screen.value += '0'">
+            <input class="key" type="button" value="/" onclick="division()">
+            <input class="key" type="button" value="x" onclick="multiply()">
+            <input class="key reset" type="reset" value="RESET">
+            <input class="key equal" type="button" value="=" onclick="equal()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/AlanJVD" target="_blank">Alan Delgado</a>.
+    </div>
+  </footer>
+
+</body>
+
+</html>
